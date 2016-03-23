@@ -59,9 +59,9 @@ cat <<EOF > Dockerfile
 FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get install -y g++ make git zlib1g-dev python
-RUN git clone https://github.com/voutcn/megahit.git /home/megahit
-    && cd /home/megahit
-    && git checkout 01b6692a4286973343da133f63d9e3c1252a5e8e
+RUN git clone https://github.com/voutcn/megahit.git /home/megahit \
+    && cd /home/megahit \
+    && git checkout 01b6692a4286973343da133f63d9e3c1252a5e8e \
     && make
 ENTRYPOINT ["/home/megahit/megahit"]
 EOF
