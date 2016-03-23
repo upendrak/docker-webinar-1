@@ -56,12 +56,13 @@ You can use a Dockerfile to build an image. Let's encode the commands needed to 
 mkdir ~/make_megahit
 cd ~/make_megahit
 cat <<EOF > Dockerfile
-FROM ubuntu:14.04.
+FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get install -y g++ make git zlib1g-dev python
 RUN git clone https://github.com/voutcn/megahit.git /home/megahit
-RUN cd /home/megahit && make
-RUN chmod +x megahit && cp megahit /usr/bin
+    && cd /home/megahit
+    && git checkout 01b6692a4286973343da133f63d9e3c1252a5e8e
+    && make
 ENTRYPOINT ["/home/megahit/megahit"]
 EOF
 ```
@@ -129,7 +130,20 @@ Now You can tag the image like so ::
 `docker tag ubuntu/megahit:<tag> <user>/megahit:<tag>`
 
 If you wanted to make this broadly available, the next steps
-would be to log into the Docker hub and push it; I did so with
+would be to log into the [Docker Hub] (https://hub.docker.com/) and push it; I did so with
 these commands: ``docker login`` and ``docker push <user>/megahit:<tag>``.
 
 If you have any trouble dockerizing a tool, contact Cyverse
+
+Summary points
+==============
+
+* Docker provides a nice way to bundle multiple packages of software
+  together, for both yourself and for others to run.
+
+* Docker gives you a good way to isolate what you're running from the
+  data you're running it on.
+
+* The Dockerfile enhances reproducibility by giving explicit instructions
+  for what to install, rather than simply bundling it all in a binary.
+
