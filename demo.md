@@ -21,11 +21,6 @@ This document aims to provide you hands-on experience with building your tools i
 
 For Linux users, you need to install [Docker engine] (https://docs.docker.com/engine/installation/). For PC and Mac users you need to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine] (https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Video series on setting up Docker on your machine: [Mac](https://www.youtube.com/watch?v=lNkVxDSRo7M), [Windows](https://youtu.be/S7NVloq0EBc) and [Linux](https://www.youtube.com/watch?v=V9AKvZZCWLc)
 
-Now, configure the default user to use Docker:
-
-`sudo usermod -aG docker <user>`
-
-and log out and log back in.
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="createdockerfile"></a>
@@ -37,7 +32,6 @@ mkdir ~/make_fastqc_plus
 cd ~/make_fastqc_plus
 ```
 ```
-cat <<EOF > Dockerfile
 FROM ubuntu:14.04.3
 MAINTAINER Roger Barthelson <rogerab@email.arizona.edu>
 LABEL Description="This image is used for running FastQC and creating an output html file"
@@ -54,7 +48,6 @@ RUN chmod a+x iPlant-basic-scripts-master/embed_images.pl \
 RUN cp /iPlant-basic-scripts-master/fastqc_plus.sh /usr/bin \
     && cp /iPlant-basic-scripts-master/embed_images.pl /usr/bin
 ENTRYPOINT [ "fastqc_plus.sh" ]
-EOF
 ```
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
@@ -71,11 +64,11 @@ This creates a new image named `fastqc_plus`. If you run:
 
 `docker images`
 
-you should see something like:
+you should see `fastqc_plus` image in there
 
 Once it's built, you can now test the built `fastqc_plus` image by running it like so ::
 
-`docker run fastqc_plus`
+`docker run fastqc_plus -h`
 
 You should see all the command line arguments for `fastqc_plus` image
 
@@ -86,8 +79,8 @@ First download the test data into a scratch directory like so::
 ```
 mkdir ~/my-scratch-dir
 cd ~/my-scratch-dir
-iget -P -V -N 2 -T -X checkpoint /iplant/home/shared/iplantcollaborative/example_data/fastqc_plus/inputs/ATreads.fq
-iget -P -V -N 2 -T -X checkpoint /iplant/home/shared/iplantcollaborative/example_data/fastqc_plus/inputs/ATreads2.fq
+iget -PVT /iplant/home/shared/iplantcollaborative/example_data/fastqc_plus/inputs/ATreads.fq
+iget -PVT /iplant/home/shared/iplantcollaborative/example_data/fastqc_plus/inputs/ATreads2.fq
 ```
 
 Now run it like so ::
@@ -117,3 +110,8 @@ Once the Dockerized tool is installed, you can [design a new interface](https://
 ### Test your app using test data
 After creating the new app according to your design, test your app in the DE to make sure it works properly.
 
+## References
+- [What is docker](https://www.docker.com/what-docker)
+- [Docker in DE](https://pods.cyverse.org/wiki/display/DEmanual/Dockerizing+Your+Tools+for+the+CyVerse+Discovery+Environment#DockerizingYourToolsfortheCyVerseDiscoveryEnvironment-Steps)
+- [Self-guided exercise](https://github.com/upendrak/docker-webinar-1/blob/master/exercise.md#optional)
+4. 
