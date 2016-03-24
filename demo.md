@@ -7,17 +7,17 @@
 This document aims to provide you hands-on experience with building your tools in CyVerse's DE. For this, i'm going to show how you dockerize [Fastqc_plus](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip) too as well importing them to CyVerse DE as app. Even if you have no prior experience with docker, this demo should be all you need to get started. All the code used in the demo is available in the [Github repo](https://github.com/upendrak/docker-webinar-1).
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
-### Table of Contents
-- [Install Docker] (#installdocker)
-- [Create Dockerfile](#createdockerfile)
-- [Build and test the image](#buildtest) 
-- [Request installation of the Dockerized tool](#request)
-- [Create and save the new app interface in the DE](#newUI)
-- [Test your app in the DE](#testapp)
+### Steps
+1. [Install Docker] (#installdocker)
+2. [Create Dockerfile](#createdockerfile)
+3. [Build and test the image](#buildtest) 
+4. [Request installation of the Dockerized tool](#request)
+5. [Create and save the new app interface in the DE](#newUI)
+6. [Test your app in the DE](#testapp)
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="installdocker"></a>
-### Install Docker
+### Install Docker (one time only)
 
 For Linux users, you need to install [Docker engine] (https://docs.docker.com/engine/installation/). For PC and Mac users you need to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine] (https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Video series on setting up Docker on your machine: [Mac](https://www.youtube.com/watch?v=lNkVxDSRo7M), [Windows](https://youtu.be/S7NVloq0EBc) and [Linux](https://www.youtube.com/watch?v=V9AKvZZCWLc)
 
@@ -30,28 +30,31 @@ and log out and log back in.
 <a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="createdockerfile"></a>
 ### Create a Dockerfile
+Dockerfile is a file that constains set of instructions/commands that are used to build the Docker image.
 
 ```
 mkdir ~/make_fastqc_plus
 cd ~/make_fastqc_plus
 ```
 ```
-FROM ubuntu14.04.3 
+cat <<EOF > Dockerfile
+FROM ubuntu:14.04.3
 MAINTAINER Roger Barthelson <rogerab@email.arizona.edu>
 LABEL Description="This image is used for running FastQC and creating an output html file"
 RUN apt-get -y update
 RUN apt-get -y install wget unzip make tzdata-java openjdk-7-jre-headless openjdk-7-jre default-jre
-ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip \
-    && unzip fastqc_v0.10.1.zip \ 
+RUN wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip \
+    && unzip fastqc_v0.10.1.zip \
     && chmod a+x FastQC/fastqc \
-    && cp -r FastQC/* /usr/bin \
-ADD -O - http://cpanmin.us | perl - App::cpanminus && cpanm File::Slurp
-ADD https://github.com/azroger/iPlant-basic-scripts/archive/master.zip && unzip master.zip
+    && cp -r FastQC/* /usr/bin
+RUN wget -O- http://cpanmin.us | perl - App::cpanminus && cpanm File::Slurp
+RUN wget https://github.com/azroger/iPlant-basic-scripts/archive/master.zip && unzip master.zip
 RUN chmod a+x iPlant-basic-scripts-master/embed_images.pl \
     && chmod a+x iPlant-basic-scripts-master/fastqc_plus.sh
 RUN cp /iPlant-basic-scripts-master/fastqc_plus.sh /usr/bin \
     && cp /iPlant-basic-scripts-master/embed_images.pl /usr/bin
 ENTRYPOINT [ "fastqc_plus.sh" ]
+EOF
 ```
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
