@@ -1,6 +1,7 @@
 # CyVerse Focus Forum Webinar: Self-guided exercise 
 
-## Contents
+<a href="#top" class="top" id="table-of-contents">Top</a>
+## Table of Contents
 - [Install Docker](#install)
 - [Run Docker] (#run Docker)
 - [Create a Dockerfile] (#createdockerfile)
@@ -8,6 +9,7 @@
 - [Optional steps](#optional)
 - [Summary point](#summary)
 - [CyVerse support](#support)
+
 
 <a id="install"></a>
 ### Install Docker
@@ -20,6 +22,7 @@ Now, configure the default user to use Docker:
 
 and log out and log back in.
 
+<a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="run Docker"></a>
 ### Run Docker
 
@@ -40,6 +43,7 @@ This message shows that your installation appears to be working correctly.
 ```
 If you see the above output then your Docker installation is successful. You can procede to Building images with Docker now
 
+<a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="createdockerfile"></a>
 ### Create a Dockerfile
 
@@ -74,6 +78,7 @@ commands tell Docker what to execute (and then save the results from);
 and the `ENTRYPOINT` specifies the script entry point - a command that is
 run if no other command is given.
 
+<a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="buildingimages"></a>
 ### Building images
 
@@ -121,6 +126,8 @@ docker run -v ~/my-scratch-dir:/working-dir -w /working-dir \
 ```
 If the tool's container produced outputs in that host's scratch directory (`ecoli` in this case), then your tool is ready for installation in DE.
 
+
+<a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="optional"></a>
 ### Optional steps
 
@@ -132,6 +139,7 @@ If you wanted to make this broadly available, the next steps
 would be to log into the [Docker Hub] (https://hub.docker.com/) and push it; I did so with these commands: ``docker login`` and ``docker push <user>/megahit:<tag>``.
 
 
+<a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="summary"></a>
 ### Summary points
 
@@ -145,6 +153,7 @@ would be to log into the [Docker Hub] (https://hub.docker.com/) and push it; I d
   for what to install, rather than simply bundling it all in a binary.
 
 
+<a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="support"></a>
 ### CyVerse support
 
