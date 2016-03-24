@@ -114,4 +114,3 @@ After creating the new app according to your design, test your app in the DE to 
 - [What is docker](https://www.docker.com/what-docker)
 - [Docker in DE](https://pods.cyverse.org/wiki/display/DEmanual/Dockerizing+Your+Tools+for+the+CyVerse+Discovery+Environment#DockerizingYourToolsfortheCyVerseDiscoveryEnvironment-Steps)
 - [Self-guided exercise](https://github.com/upendrak/docker-webinar-1/blob/master/exercise.md#optional)
-4. 
