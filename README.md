@@ -13,13 +13,3 @@
 Roger Barthelson (<rogerab@email.arizona.edu>)
 
 Upendra Devisetty (<upendra@cyverse.org>)
-
-### Contents
-- Webinar slides
-- [Docker demo](https://github.com/upendrak/docker-webinar-1/blob/master/demo.md)
-- Recording of the webinar
-
-### References
-- [What is docker?](https://www.docker.com/what-docker)
-- [Docker in DE](https://pods.cyverse.org/wiki/display/DEmanual/Dockerizing+Your+Tools+for+the+CyVerse+Discovery+Environment#DockerizingYourToolsfortheCyVerseDiscoveryEnvironment-Steps)
-- [Self-guided exercise](https://github.com/upendrak/docker-webinar-1/blob/master/exercise.md#optional)
