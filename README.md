@@ -10,15 +10,16 @@
 03/25/2016
 
 ### Presenters
-Roger Barthelson and Upendra Devisetty (CyVerse, University of Arizona)
+Roger Barthelson (<rogerab@email.arizona.edu>)
+
+Upendra Devisetty (<upendra@cyverse.org>)
 
 ### Contents
-- [Self-guided exercise](https://github.com/upendrak/docker-webinar-1/blob/master/exercise.md#optional)
 - Docker presentation slides
 - [Docker demo](https://github.com/upendrak/docker-webinar-1/blob/master/demo.md)
 - Recording of the webinar
 
-### Some useful resources
-- [CyVerse's Docker wiki](https://pods.iplantcollaborative.org/wiki/display/DEmanual/Dockerizing+Your+Tools+for+the+CyVerse+Discovery+Environment)
-- [Ask](http://ask.iplantcollaborative.org/questions/)
-
+### References
+- [What is docker?](https://www.docker.com/what-docker)
+- [Docker in DE](https://pods.cyverse.org/wiki/display/DEmanual/Dockerizing+Your+Tools+for+the+CyVerse+Discovery+Environment#DockerizingYourToolsfortheCyVerseDiscoveryEnvironment-Steps)
+- [Self-guided exercise](https://github.com/upendrak/docker-webinar-1/blob/master/exercise.md#optional)
