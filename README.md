@@ -1,7 +1,8 @@
 
-<!-- <a id="top"></a>
-<img src="http://imageshack.com/a/img924/4859/4Co3uO.png" alt="CyVerse logo">
-<img src="https://imagizer.imageshack.us/v2/178x145q90/r/923/PG3oB4.png" alt="DE logo"> -->
+ <a id="top"></a>
+<img src="http://imageshack.com/a/img921/9080/F5RKAh.png" alt="CyVerse logo">
+<img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
+<img src="http://imageshack.com/a/img923/6969/JnPuWr.png" alt="Docker logo">
 
 # CyVerse Focus Forum Webinar: Using Docker to Bring Tools into the Discovery Environment
 
