@@ -8,8 +8,8 @@
 <a href="#top" class="top" id="table-of-contents">Top</a>
 ## Table of Contents
 - [Install Docker](#install)
-- [Run Docker] (#run Docker)
-- [Create a Dockerfile] (#createdockerfile)
+- [Run Docker](#run Docker)
+- [Create a Dockerfile](#createdockerfile)
 - [Building images](#buildingimages)
 - [Optional steps](#optional)
 - [Summary point](#summary)
@@ -31,7 +31,7 @@ and log out and log back in.
 <a id="run Docker"></a>
 ### Run Docker
 
-Once you are done installing Docker, test your Docker installation by running the following:
+Once you are done installing Docker, test your Docker installation by running:
 
 ```
 $ docker run hello-world
@@ -46,14 +46,13 @@ Hello from Docker.
 This message shows that your installation appears to be working correctly.
 ...
 ```
-If you see the above output then your Docker installation is successful. You can procede to Building images with Docker now
+If you see the above output then your Docker installation is successful. You can procede to Create a Dockerfile now
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="createdockerfile"></a>
 ### Create a Dockerfile
 
-For the self-guided tutorial, let's build a Docker image for the MEGAHIT short-read assembler. This is all based on the `Assembling E. coli tutorial
-<http://angus.readthedocs.org/en/2015/assembling-ecoli.html>`--.
+For the self-guided tutorial, let's build a Docker image for the MEGAHIT short-read assembler. This is all based on the `Assembling E. coli tutorial <http://angus.readthedocs.org/en/2015/assembling-ecoli.html>`--.
 
 You can use a Dockerfile to build an image. Let's encode the commands needed to build a `megahit` image in a Dockerfile::
 
@@ -87,7 +86,7 @@ run if no other command is given.
 <a id="buildingimages"></a>
 ### Building images
 
-Let's build a Docker image from this::
+Let's build a Docker image from the above Dockerfile::
 
 docker build -t megahit .
 
@@ -111,7 +110,7 @@ Once it's built, you can now test the built `megahit` image by running it like s
 
 You should see all the command line arguments for `megahit` image
 
-But this is not SO useful. You should test the same image using input arguments like so ::
+But this is not so useful. You should test the same image using input arguments ::
 
 First download the test data into a scratch directory like so::
 
