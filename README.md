@@ -15,7 +15,7 @@ Roger Barthelson (<rogerab@email.arizona.edu>)
 Upendra Devisetty (<upendra@cyverse.org>)
 
 ### Contents
-- Docker presentation slides
+- Webinar slides
 - [Docker demo](https://github.com/upendrak/docker-webinar-1/blob/master/demo.md)
 - Recording of the webinar
 
