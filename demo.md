@@ -4,9 +4,9 @@
 <img src="http://imageshack.com/a/img924/4108/f9PfBn.png" alt="fq-1 logo">
 <img src="http://imageshack.com/a/img923/6054/z3D1pg.png" alt="fq-2 logo">
 
-This document aims to provide you hands-on experience with building your tools in CyVerse's DE. For this, i'm going to show how you dockerize [Fastqc_plus](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip) too as well importing them to CyVerse DE as app. Even if you have no prior experience with docker, this demo should be all you need to get started. All the code used in the demo is available in the [Github repo](https://github.com/upendrak/docker-webinar-1).
+This document aims to provide you hands-on experience with building your tools in CyVerse's DE. For this, i'm going to demo how you can dockerize [Fastqc_plus](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip) as well importing them to CyVerse DE as app. Even if you have no prior experience with docker, this demo should be all you need to get started. All the code used in the demo is available in the [Github repo](https://github.com/upendrak/docker-webinar-1).
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 ### Steps
 1. [Install Docker] (#installdocker)
 2. [Create Dockerfile](#createdockerfile)
@@ -15,14 +15,14 @@ This document aims to provide you hands-on experience with building your tools i
 5. [Create and save the new app interface in the DE](#newUI)
 6. [Test your app in the DE](#testapp)
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 <a id="installdocker"></a>
 ### Install Docker (one time only)
 
 For Linux users, you need to install [Docker engine] (https://docs.docker.com/engine/installation/). For PC and Mac users you need to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine] (https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Video series on setting up Docker on your machine: [Mac](https://www.youtube.com/watch?v=lNkVxDSRo7M), [Windows](https://youtu.be/S7NVloq0EBc) and [Linux](https://www.youtube.com/watch?v=V9AKvZZCWLc)
 
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 <a id="createdockerfile"></a>
 ### Create a Dockerfile
 Dockerfile is a file that constains set of instructions/commands that are used to build the Docker image.
@@ -50,7 +50,7 @@ RUN cp /iPlant-basic-scripts-master/fastqc_plus.sh /usr/bin \
 ENTRYPOINT [ "fastqc_plus.sh" ]
 ```
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 <a id="buildtest"></a>
 ### Build and test the image
 
@@ -64,7 +64,7 @@ This creates a new image named `fastqc_plus`. If you run:
 
 `docker images`
 
-you should see `fastqc_plus` image in there
+you should see `fastqc_plus` image
 
 Once it's built, you can now test the built `fastqc_plus` image by running it like so ::
 
@@ -86,26 +86,25 @@ iget -PVT /iplant/home/shared/iplantcollaborative/example_data/fastqc_plus/input
 Now run it like so ::
 
 ```
-docker run -v ~/my-scratch-dir:/working-dir -w /working-dir \
-            fastqc_plus ATreads.fq ATreads2.fq
+docker run -v ~/my-scratch-dir:/working-dir -w /working-dir fastqc_plus ATreads.fq ATreads2.fq
 ```
 The `-v` option mounts the scratch directory on the host machine into that `/working-dir` directory inside the container, and the `-w` option sets the working directory inside the container to that same `/working-dir` directory.
 
 If the tool's container produced outputs in that host's scratch directory (`individual_reports` in this case), then your tool is ready for installation in DE.
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 <a id="request"></a>
 ### Request installation of the Dockerized tool
 Read the main steps in the DE user manual for [submitting your request for installation](https://wiki.cyverse.org/wiki/display/DEmanual/Requesting+Installation+of+a+New+Tool) of the new tool (executable) in the DE. Once the tool is installed, you will receive an email notification.
 
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 <a id="newUI"></a>
 ### Create and save the new app interface in the DE
 Once the Dockerized tool is installed, you can [design a new interface](https://pods.iplantCollaborative.org/wiki/display/DEmanual/Designing+the+Interface) within the DE.
 
 
-<a href="#top" class="top" id="table-of-contents">Top</a>
+<a href="#top" class="top" id="steps">Top</a>
 <a id="testapp"></a>
 ### Test your app using test data
 After creating the new app according to your design, test your app in the DE to make sure it works properly.
