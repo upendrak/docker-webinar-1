@@ -1,14 +1,19 @@
-# CyVerse Focus Forum Webinar: Fastqc_plus app demo 
+<a id="top"></a>
+<img src="http://imageshack.com/a/img921/9080/F5RKAh.png" alt="CyVerse logo">
+<img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
+<img src="http://imageshack.com/a/img923/6969/JnPuWr.png" alt="Docker logo">
+
+# CyVerse Focus Forum Webinar: *Fastqc_plus* app demo 
 
 <a id="top"></a>
 <img src="http://imageshack.com/a/img924/4108/f9PfBn.png" alt="fq-1 logo">
 <img src="http://imageshack.com/a/img923/6054/z3D1pg.png" alt="fq-2 logo">
 
-This document aims to provide you hands-on experience with building your tools in CyVerse's DE. For this, i'm going to demo how you can dockerize [Fastqc_plus](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip) as well importing them to CyVerse DE as app. Even if you have no prior experience with docker, this demo should be all you need to get started. All the code used in the demo is available in the [Github repo](https://github.com/upendrak/docker-webinar-1).
+This document aims to provide you hands-on experience with building your tools in CyVerse's DE. For this, i'm going to demo how you can dockerize *Fastqc_plus* as well importing them to CyVerse DE as app. Even if you have no prior experience with docker, this demo should be all you need to get started. All the code used in the demo is available in the [Github repo](https://github.com/upendrak/docker-webinar-1).
 
 <a href="#top" class="top" id="steps">Top</a>
 ### Steps
-1. [Install Docker] (#installdocker)
+1. [Install Docker](#installdocker)
 2. [Create Dockerfile](#createdockerfile)
 3. [Build and test the image](#buildtest) 
 4. [Request installation of the Dockerized tool](#request)
@@ -72,7 +77,7 @@ Once it's built, you can now test the built `fastqc_plus` image by running it li
 
 You should see all the command line arguments for `fastqc_plus` image
 
-But this is not so useful. You should test the same image using input arguments like so ::
+But this is not so useful. You should test the same image using input arguments ::
 
 First download the test data into a scratch directory like so::
 
