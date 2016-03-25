@@ -48,8 +48,8 @@ RUN wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1
     && cp -r FastQC/* /usr/bin
 RUN wget -O- http://cpanmin.us | perl - App::cpanminus && cpanm File::Slurp
 RUN wget https://github.com/azroger/iPlant-basic-scripts/archive/master.zip && unzip master.zip
-RUN chmod a+x iPlant-basic-scripts-master/embed_images.pl \
-    && chmod a+x iPlant-basic-scripts-master/fastqc_plus.sh
+RUN chmod a+x /iPlant-basic-scripts-master/embed_images.pl \
+    && chmod a+x /iPlant-basic-scripts-master/fastqc_plus.sh
 RUN cp /iPlant-basic-scripts-master/fastqc_plus.sh /usr/bin \
     && cp /iPlant-basic-scripts-master/embed_images.pl /usr/bin
 ENTRYPOINT [ "fastqc_plus.sh" ]
@@ -61,21 +61,23 @@ ENTRYPOINT [ "fastqc_plus.sh" ]
 
 Let's build a Docker image from this::
 
-`docker build -t fastqc_plus .`
+`docker build -t fastqc_plus_test .`
 
 (This will take a several minutes..)
 
-This creates a new image named `fastqc_plus`. If you run:
+This creates a new image named `fastqc_plus_test`. If you run:
 
 `docker images`
 
 you should see `fastqc_plus` image
 
-Once it's built, you can now test the built `fastqc_plus` image by running it like so ::
+Once it's built, you can now test the built `fastqc_plus_test` image by running it like so ::
 
-`docker run fastqc_plus -h`
+`docker run fastqc_plus_test -h`
 
-You should see all the command line arguments for `fastqc_plus` image
+You should see all the command line arguments for `fastqc_plus_test` image
+
+`Usage : fastqc_plus fastq1/fq1 fastq2/fq2 ....`
 
 But this is not so useful. You should test the same image using input arguments ::
 
@@ -91,7 +93,7 @@ iget -PVT /iplant/home/shared/iplantcollaborative/example_data/fastqc_plus/input
 Now run it like so ::
 
 ```
-docker run -v ~/my-scratch-dir:/working-dir -w /working-dir fastqc_plus ATreads.fq ATreads2.fq
+docker run -v ~/my-scratch-dir:/working-dir -w /working-dir fastqc_plus_test ATreads.fq ATreads2.fq
 ```
 The `-v` option mounts the scratch directory on the host machine into that `/working-dir` directory inside the container, and the `-w` option sets the working directory inside the container to that same `/working-dir` directory.
 
