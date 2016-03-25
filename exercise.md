@@ -12,7 +12,7 @@
 - [Create a Dockerfile](#createdockerfile)
 - [Building images](#buildingimages)
 - [Optional steps](#optional)
-- [Summary point](#summary)
+- [Summary points](#summary)
 - [CyVerse support](#support)
 
 
