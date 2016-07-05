@@ -30,7 +30,7 @@ For Linux users, you need to install [Docker engine] (https://docs.docker.com/en
 <a href="#top" class="top" id="steps">Top</a>
 <a id="createdockerfile"></a>
 ### Create a Dockerfile
-Dockerfile is a file that constains set of instructions/commands that are used to build the Docker image.
+Dockerfile is a file that constains set of instructions/commands that are used to build the Docker image. Create a file called `Dockerfile` before building an image
 
 ```
 mkdir ~/make_fastqc_plus
