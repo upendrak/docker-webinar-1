@@ -13,3 +13,7 @@
 Roger Barthelson (<rogerab@email.arizona.edu>)
 
 Upendra Devisetty (<upendra@cyverse.org>)
+
+# Links for materials
+1. Demo (https://github.com/upendrak/docker-webinar-1/blob/master/demo.md)
+2. Exercise (https://github.com/upendrak/docker-webinar-1/blob/master/exercise.md)
