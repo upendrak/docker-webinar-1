@@ -9,7 +9,7 @@
 <img src="http://imageshack.com/a/img924/4108/f9PfBn.png" alt="fq-1 logo">
 <img src="http://imageshack.com/a/img923/6054/z3D1pg.png" alt="fq-2 logo">
 
-This document aims to provide you hands-on experience with building your tools in CyVerse's DE. For this, i'm going to demo how you can dockerize *Fastqc_plus* as well importing them to CyVerse DE as app. Even if you have no prior experience with docker, this demo should be all you need to get started. All the code used in the demo is available in the [Github repo](https://github.com/upendrak/docker-webinar-1).
+This document aims to provide you hands-on with building your tools in CyVerse's DE. For this, i'm going to demo how you can dockerize *Fastqc_plus* tool as well importing them to CyVerse DE as an app. Even if you have no prior experience with docker, this demo should be enough to get you started.
 
 <a href="#top" class="top" id="steps">Top</a>
 ### Steps
@@ -22,9 +22,9 @@ This document aims to provide you hands-on experience with building your tools i
 
 <a href="#top" class="top" id="steps">Top</a>
 <a id="installdocker"></a>
-### Install Docker (one time only)
+### Install Docker for your platform (one time only)
 
-For Linux users, you need to install [Docker engine] (https://docs.docker.com/engine/installation/). For PC and Mac users you need to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine] (https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Video series on setting up Docker on your machine: [Mac](https://www.youtube.com/watch?v=lNkVxDSRo7M), [Windows](https://youtu.be/S7NVloq0EBc) and [Linux](https://www.youtube.com/watch?v=V9AKvZZCWLc)
+For Linux users, you need to install [Docker engine] (https://docs.docker.com/engine/installation/). For PC and Mac users you need to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine] (https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Video series on setting up Docker on your machine: [Mac](https://www.youtube.com/watch?v=lNkVxDSRo7M), [Windows](https://youtu.be/S7NVloq0EBc) and [Linux](https://www.youtube.com/watch?v=V9AKvZZCWLc). Recently Mac and Windows users can install Docker directly onto your computer without having to use virtual machines. Download Docker for [Mac](https://download.docker.com/mac/stable/Docker.dmg) and Docker for [Windows](https://download.docker.com/win/stable/InstallDocker.msi).  
 
 
 <a href="#top" class="top" id="steps">Top</a>
