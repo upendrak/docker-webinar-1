@@ -1,5 +1,3 @@
-<a id="top"></a>
-
 # Basic introduction of Docker 
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
