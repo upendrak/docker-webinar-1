@@ -3,7 +3,7 @@
 <img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
 <img src="http://imageshack.com/a/img923/6969/JnPuWr.png" alt="Docker logo">
 
-# CyVerse Focus Forum Webinar: Self-guided exercise 
+# Basic introduction of Docker 
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 
