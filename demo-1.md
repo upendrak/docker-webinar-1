@@ -1,12 +1,10 @@
 <a id="top"></a>
-<img src="http://imageshack.com/a/img921/9080/F5RKAh.png" alt="CyVerse logo">
-<img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
 
 # Basic introduction of Docker 
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 
-This document aims to provide you hands-on building images using Docker.
+This document aims to provide you hands-on experience on building images using Docker.
 
 <a href="#top" class="top" id="steps">Top</a>
 ### Steps
@@ -120,7 +118,7 @@ would be to log into the [Docker Hub] (https://hub.docker.com/) and push it; I d
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="summary"></a>
-### Summary points
+### Summary
 
 * Docker provides a nice way to bundle multiple packages of software
   together, for both yourself and for others to run.
