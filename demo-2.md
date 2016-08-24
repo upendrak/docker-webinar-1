@@ -1,7 +1,7 @@
 <a id="top"></a>
 <img src="http://imageshack.com/a/img921/9080/F5RKAh.png" alt="CyVerse logo">
 <img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
-<img src="http://imageshack.com/a/img923/6969/JnPuWr.png" alt="Docker logo">
+<img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fdapperdeveloper.com%2Fwp-content%2Fuploads%2Flarge_v-trans.png&imgrefurl=http%3A%2F%2Fdapperdeveloper.com%2F2016%2F05%2F18%2Fdeveloping-with-docker-and-webpack%2F&docid=mbhRR89C19HRbM&tbnid=92EkotPIl4WWjM%3A&w=1354&h=1208&bih=671&biw=1280&ved=0ahUKEwjzzI-W7djOAhVT1mMKHUmyDNEQMwhDKAEwAQ&iact=mrc&uact=8" alt="Docker logo">
 
 # CyVerse Focus Forum Webinar: *Fastqc_plus* app demo 
 
