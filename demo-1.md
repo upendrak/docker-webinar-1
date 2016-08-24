@@ -1,4 +1,4 @@
-# Basic introduction of Docker 
+# Basic introduction and building images using Docker 
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 
