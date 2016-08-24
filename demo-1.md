@@ -2,7 +2,7 @@
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 
-This document aims to provide you hands-on experience on building images using Docker.
+The goal of this tutorial is to show you the basics of building images using Docker.
 
 <a href="#top" class="top" id="steps">Top</a>
 ### Steps
@@ -99,7 +99,7 @@ docker run -v ~/my-scratch-dir:/working-dir -w /working-dir \
             megahit --12 ecoli_ref-5m-trim.pe.fq.gz \
             -r ecoli_ref-5m-trim.se.fq.gz -o ecoli -t 4
 ```
-If the tool's container produced outputs in that host's scratch directory (`ecoli` in this case), then your tool is ready for installation in DE.
+If the tool's container produced outputs in that host's scratch directory (`ecoli` in this case), then your tool is working.
 
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
@@ -127,6 +127,7 @@ would be to log into the [Docker Hub] (https://hub.docker.com/) and push it; I d
 * The Dockerfile enhances reproducibility by giving explicit instructions
   for what to install, rather than simply bundling it all in a binary.
 
+Let's create a Dockerfile and image for [SPAdes-3.5.0](http://angus.readthedocs.io/en/2016/assembling-ecoli.html) assembler
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 <a id="support"></a>
