@@ -1,7 +1,6 @@
 <a id="top"></a>
 <img src="http://imageshack.com/a/img921/9080/F5RKAh.png" alt="CyVerse logo">
 <img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
-<img src="http://imageshack.com/a/img923/6969/JnPuWr.png" alt="Docker logo">
 
 # Basic introduction of Docker 
 
@@ -13,7 +12,9 @@ This document aims to provide you hands-on building images using Docker.
 ### Steps
 1. [Install Docker](#installdocker)
 2. [Create Dockerfile](#createdockerfile)
-3. [Build and test the image](#buildtest) 
+3. [Build and test the image](#buildtest)
+4. [Optional steps](#optional)
+5. [Summary](#summary)
 
 <a href="#top" class="top" id="steps">Top</a>
 <a id="installdocker"></a>
@@ -81,9 +82,12 @@ Once it's built, you can now test the built `megahit` image by running it like s
 
 You should see all the command line arguments for `megahit` image
 
-But this is not so useful. You should test the same image using input arguments ::
+But this is not so useful. You should test the same image using input arguments:
 
-First download the test data into a scratch directory like so::
+<a href="#top" class="top" id="steps">Top</a>
+<a id="buildtest"></a>
+
+First download the test data into a scratch directory like so:
 
 ```
 mkdir ~/my-scratch-dir
@@ -92,7 +96,7 @@ wget http://public.ged.msu.edu.s3.amazonaws.com/ecoli_ref-5m-trim.se.fq.gz
 wget http://public.ged.msu.edu.s3.amazonaws.com/ecoli_ref-5m-trim.pe.fq.gz
 ```
 
-Now run it like so ::
+And run the built image like so:
 
 ```
 docker run -v ~/my-scratch-dir:/working-dir -w /working-dir \
@@ -106,7 +110,7 @@ If the tool's container produced outputs in that host's scratch directory (`ecol
 <a id="optional"></a>
 ### Optional steps
 
-You can tag the image like so::
+You can tag the image like so:
 
 `docker tag ubuntu/megahit:<tag> <user>/megahit:<tag>`
 
