@@ -1,7 +1,7 @@
 <a id="top"></a>
 <img src="http://imageshack.com/a/img921/9080/F5RKAh.png" alt="CyVerse logo">
 <img src="http://imageshack.com/a/img923/2530/PG3oB4.png" alt="DE logo">
-<img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fdapperdeveloper.com%2Fwp-content%2Fuploads%2Flarge_v-trans.png&imgrefurl=http%3A%2F%2Fdapperdeveloper.com%2F2016%2F05%2F18%2Fdeveloping-with-docker-and-webpack%2F&docid=mbhRR89C19HRbM&tbnid=92EkotPIl4WWjM%3A&w=1354&h=1208&bih=671&biw=1280&ved=0ahUKEwjzzI-W7djOAhVT1mMKHUmyDNEQMwhDKAEwAQ&iact=mrc&uact=8" alt="Docker logo">
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcamo.githubusercontent.com%2F14b97ba4a1327c0db2200f3892788fd873a1ce20%2F687474703a2f2f626c6f672e70687573696f6e2e6e6c2f77702d636f6e74656e742f75706c6f6164732f323031332f31312f646f636b65722e706e67&imgrefurl=https%3A%2F%2Fgithub.com%2Fphusion%2Fpassenger-docker&docid=JrhC8WIktlixNM&tbnid=CY5SBKqmZy-XAM%3A&w=297&h=250&bih=671&biw=1280&ved=0ahUKEwjzzI-W7djOAhVT1mMKHUmyDNEQMwhGKAQwBA&iact=mrc&uact=8" alt="Docker logo">
 
 # CyVerse Focus Forum Webinar: *Fastqc_plus* app demo 
 
